@@ -1,16 +1,16 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 
-function NextAnixPlaygDate({ nextAnixPlaygEpisode }) {
+function NextAnixPlaygDate({ nextAiringEpisode }) {
   const [timeLeft, setTimeLeft] = useState(null);
 
   useEffect(() => {
-    if (!nextAnixPlaygEpisode) {
+    if (!nextAiringEpisode) {
       return;
     }
 
     const intervalId = setInterval(() => {
-      const timeDifference = nextAnixPlaygEpisode.AnixPlaygAt * 1000 - Date.now();
+      const timeDifference = nextAiringEpisode.AnixPlaygAt * 1000 - Date.now();
 
       if (timeDifference <= 0) {
         clearInterval(intervalId);
@@ -26,9 +26,9 @@ function NextAnixPlaygDate({ nextAnixPlaygEpisode }) {
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [nextAnixPlaygEpisode]);
+  }, [nextAiringEpisode]);
 
-  if (!nextAnixPlaygEpisode || timeLeft === null) {
+  if (!nextAiringEpisode || timeLeft === null) {
     return (
     <div className='hidden w-[98%] mx-auto lg:w-full md:flex xl:max-w-[96.5%] my-5 text-[13px] bg-[#18181B] py-2 rounded-[8px] text-center text-[#ffffffb2]  flex-row gap-1 items-center justify-center'>
        The next episode will be AnixPlayg Shortly... 

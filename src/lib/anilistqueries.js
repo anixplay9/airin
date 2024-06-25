@@ -31,7 +31,7 @@ query($perPage: Int, $page: Int) {
             format
             averageScore
             popularity
-            nextAnixPlaygEpisode {
+            nextAiringEpisode {
                 AnixPlaygAt
                 episode
               }
@@ -86,7 +86,7 @@ query($perPage: Int, $page: Int) {
             format
             averageScore
             popularity
-            nextAnixPlaygEpisode {
+            nextAiringEpisode {
                 AnixPlaygAt
                 episode
               }
@@ -139,7 +139,7 @@ query($perPage: Int, $page: Int) {
             format
             averageScore
             popularity
-            nextAnixPlaygEpisode {
+            nextAiringEpisode {
                 AnixPlaygAt
                 episode
               }
@@ -189,7 +189,7 @@ query($perPage: Int, $page: Int) {
             format
             averageScore
             popularity
-            nextAnixPlaygEpisode {
+            nextAiringEpisode {
                 AnixPlaygAt
                 episode
               }
@@ -237,7 +237,7 @@ query ($id: Int) {
       averageScore
       popularity
       countryOfOrigin
-      nextAnixPlaygEpisode {
+      nextAiringEpisode {
           AnixPlaygAt
           episode
         }
@@ -301,7 +301,7 @@ query ($id: Int) {
                 episodes
                 status
                 format
-                nextAnixPlaygEpisode {
+                nextAiringEpisode {
                   AnixPlaygAt
                   timeUntilAnixPlayg
                   episode
@@ -394,7 +394,7 @@ query ($page: Int = 1, $id: Int, $type: MediaType, $search: String, $format: [Me
       isAdult
       averageScore
       popularity
-      nextAnixPlaygEpisode {
+      nextAiringEpisode {
         AnixPlaygAt
         timeUntilAnixPlayg
         episode
@@ -517,7 +517,7 @@ export const playeranimeinfo = `query ($id: Int) {
       extraLarge
       color
     }
-    nextAnixPlaygEpisode {
+    nextAiringEpisode {
       AnixPlaygAt
       timeUntilAnixPlayg
       episode
@@ -536,7 +536,7 @@ export const playeranimeinfo = `query ($id: Int) {
           episodes
           status
           format
-          nextAnixPlaygEpisode {
+          nextAiringEpisode {
             episode
           }
         }

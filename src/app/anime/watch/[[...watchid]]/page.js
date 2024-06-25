@@ -25,7 +25,7 @@ async function getInfo(id) {
       return JSON.parse(cachedData);
     } else {
       const data = await AnimeInfoAnilist(id);
-      const cacheTime = data?.nextAnixPlaygEpisode?.episode ? 60 * 60 * 2 : 60 * 60 * 24 * 45;
+      const cacheTime = data?.nextAiringEpisode?.episode ? 60 * 60 * 2 : 60 * 60 * 24 * 45;
       if (redis && data !== null && data) {
         await redis.set(`info:${id}`, JSON.stringify(data), "EX", cacheTime);
       }
@@ -90,7 +90,7 @@ async function AnimeWatch({ params, searchParams }) {
         <div className="flex-grow w-full h-full">
           <PlayerComponent id={id} epId={epId} provider={provider} epNum={epNum} data={data} subdub={subdub} session={session} savedep={savedep}/>
           {data?.status === 'RELEASING' &&
-            <NextAiringDate nextAnixPlaygEpisode={data?.nextAnixPlaygEpisode} />
+            <NextAiringDate nextAiringEpisode={data?.nextAiringEpisode} />
           }
         </div>
         <div className="h-full lg:flex lg:flex-col md:max-lg:w-full gap-10">
