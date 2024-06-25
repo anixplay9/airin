@@ -32,7 +32,7 @@ query($perPage: Int, $page: Int) {
             averageScore
             popularity
             nextAiringEpisode {
-                AnixPlaygAt
+                airingAt
                 episode
               }
               seasonYear
@@ -87,7 +87,7 @@ query($perPage: Int, $page: Int) {
             averageScore
             popularity
             nextAiringEpisode {
-                AnixPlaygAt
+                airingAt
                 episode
               }
               seasonYear
@@ -140,7 +140,7 @@ query($perPage: Int, $page: Int) {
             averageScore
             popularity
             nextAiringEpisode {
-                AnixPlaygAt
+                airingAt
                 episode
               }
               seasonYear
@@ -190,7 +190,7 @@ query($perPage: Int, $page: Int) {
             averageScore
             popularity
             nextAiringEpisode {
-                AnixPlaygAt
+                airingAt
                 episode
               }
               seasonYear
@@ -238,7 +238,7 @@ query ($id: Int) {
       popularity
       countryOfOrigin
       nextAiringEpisode {
-          AnixPlaygAt
+          airingAt
           episode
         }
         seasonYear
@@ -302,9 +302,8 @@ query ($id: Int) {
                 status
                 format
                 nextAiringEpisode {
-                  AnixPlaygAt
-                  timeUntilAnixPlayg
-                  episode
+                  airingAt
+                  timeUntilAiring                  episode
                 }
             }
     }
@@ -395,9 +394,8 @@ query ($page: Int = 1, $id: Int, $type: MediaType, $search: String, $format: [Me
       averageScore
       popularity
       nextAiringEpisode {
-        AnixPlaygAt
-        timeUntilAnixPlayg
-        episode
+        airingAt
+        timeUntilAiring        episode
       }
       mediaListEntry {
         id
@@ -518,9 +516,8 @@ export const playeranimeinfo = `query ($id: Int) {
       color
     }
     nextAiringEpisode {
-      AnixPlaygAt
-      timeUntilAnixPlayg
-      episode
+      airingAt
+      timeUntilAiring      episode
     }
     recommendations {
       nodes {
@@ -684,10 +681,10 @@ query($page: Int, $perPage: Int, $from: Int, $to: Int){
     pageInfo{
       hasNextPage
     },
-    AnixPlaygSchedules(AnixPlaygAt_greater: $from, AnixPlaygAt_lesser: $to){
+    AnixPlaygSchedules(airingAt_greater: $from, airingAt_lesser: $to){
       episode,
       timeUntilAnixPlayg,
-      AnixPlaygAt,
+      airingAt,
       media{
         title
         coverImage{

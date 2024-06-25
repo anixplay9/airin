@@ -10,7 +10,7 @@ function NextAnixPlaygDate({ nextAiringEpisode }) {
     }
 
     const intervalId = setInterval(() => {
-      const timeDifference = nextAiringEpisode.AnixPlaygAt * 1000 - Date.now();
+      const timeDifference = nextAiringEpisode.airingAt * 1000 - Date.now();
 
       if (timeDifference <= 0) {
         clearInterval(intervalId);
