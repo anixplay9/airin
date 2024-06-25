@@ -1,6 +1,6 @@
 import React from "react";
 import { AnimeInfoAnilist } from '@/lib/Anilistfunctions'
-import NextAnixPlaygDate from "@/components/videoplayer/NextAnixPlaygDate";
+import NextAiringDate from "@/components/videoplayer/NextAiringDate";
 import PlayerAnimeCard from "@/components/videoplayer/PlayerAnimeCard";
 import Navbarcomponent from "@/components/navbar/Navbar";
 import PlayerComponent from "@/components/videoplayer/PlayerComponent";
