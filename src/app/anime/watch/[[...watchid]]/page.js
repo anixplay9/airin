@@ -90,7 +90,7 @@ async function AnimeWatch({ params, searchParams }) {
         <div className="flex-grow w-full h-full">
           <PlayerComponent id={id} epId={epId} provider={provider} epNum={epNum} data={data} subdub={subdub} session={session} savedep={savedep}/>
           {data?.status === 'RELEASING' &&
-            <NextAnixPlaygDate nextAnixPlaygEpisode={data?.nextAnixPlaygEpisode} />
+            <NextAiringDate nextAnixPlaygEpisode={data?.nextAnixPlaygEpisode} />
           }
         </div>
         <div className="h-full lg:flex lg:flex-col md:max-lg:w-full gap-10">
