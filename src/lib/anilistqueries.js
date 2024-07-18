@@ -418,7 +418,7 @@ export const notifications = `query ($page: Int) {
       hasNextPage
     }
     notifications(resetNotificationCount: true) {
-			... on AiringNotification {
+			... on AnixPlaygNotification {
 				id
 				type 
 				animeId
@@ -684,9 +684,9 @@ query($page: Int, $perPage: Int, $from: Int, $to: Int){
     pageInfo{
       hasNextPage
     },
-    airingSchedules(airingAt_greater: $from, airingAt_lesser: $to){
+    AnixPlaygSchedules(airingAt_greater: $from, airingAt_lesser: $to){
       episode,
-      timeUntilAiring,
+      timeUntilAnixPlayg,
       airingAt,
       media{
         title

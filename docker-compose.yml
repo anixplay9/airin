@@ -1,11 +1,11 @@
 version: "3.3"
 services:
-  airin:
-    container_name: airin
+  AnixPlay:
+    container_name: AnixPlay
     restart: always
     ports:
       - 3000:3000
-    image: ghcr.io/Noname968/airin:latest
+    image: ghcr.io/Noname968/AnixPlay:latest
     links:
       - redis:redis
       - consumet:consumet
